@@ -9,12 +9,19 @@ import { Card } from '../model/card';
 })
 export class DeckComponent {
   cards: Card[] = [];
+  router: any;
 
   constructor(private cardService: CardService) { }
 
   ngOnInit(): void {
     this.cardService.getCard().subscribe((data: Card[]) => {
       this.cards = data;
+    });
+  }
+
+  deleteCard(cardId: number | undefined = 0): void {
+    this.cardService.deleteCard(cardId).subscribe(() => {
+      this.router.navigate(['/deck']);
     });
   }
 }

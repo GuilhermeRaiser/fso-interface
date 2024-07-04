@@ -3,23 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deck de Cartas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <title>Deck</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Deck de Cartas</h1>
+    <h1>MemCard</h1>
+    <h2>Deck de Cartas</h2>
+    <div class="container" >
         
-        <div class="card-container" *ngFor="let card of cards">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">{{card.addnomeDeck}}</h5>
-                    <h5 class="card-title">{{card.titulo}}</h5>
-                    <p class="card-text">{{card.textoFrente}}</p>
-                    <button class="btn-edit">Editar</button>
-                    <button class="btn-delete">Excluir</button>
-                </div>
-            </div>       
-        </div>
+        <div class="card text-center" *ngFor="let card of cards">
+            <div class="card-header">
+              {{card.addnomeDeck}}
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{card.titulo}}</h5>
+              <p class="card-text">{{card.textoFrente}}</p>
+              <button class="btn btn-primary" (click)="deleteCard(card.id)">Excluir</button>
+              <button class="btn btn-primary">Editar</button>
+            </div>
+            <div class="card-footer text-body-secondary">
+              2 days ago
+            </div>
+          </div>
+        
+    </div>
+    <br>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" type="button">Adicione uma carta</button>
     </div>
 </body>
 </html>
+
+

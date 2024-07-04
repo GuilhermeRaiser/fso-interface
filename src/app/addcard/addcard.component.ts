@@ -22,4 +22,8 @@ export class AddcardComponent {
       this.router.navigate(['/deck']);
     });
   }
+
+  
+  
+  
 }

@@ -24,6 +24,10 @@ export class CardService {
   getCardById(id: number): Observable<Card> {
     return this.http.get<Card>(`${this.apiURL}/${id}`);
   }
+  deleteCard(cardId: number): Observable<void> {
+    const url = `${this.apiURL}/${cardId}`;
+    return this.http.delete<void>(url);
+  }
 }
   
 
