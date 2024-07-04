@@ -7,7 +7,7 @@
     <title>Deck</title>
 </head>
 <body>
-    <h1>MemCard</h1>
+    <h1 [routerLink]="['/home']">MemCard</h1>
     <h2>Deck de Cartas</h2>
     <div class="container" >
         
@@ -29,7 +29,7 @@
     </div>
     <br>
     <div class="d-grid gap-2 col-6 mx-auto">
-        <button class="btn btn-primary" type="button">Adicione uma carta</button>
+        <button class="btn btn-primary" type="button" [routerLink]="['/addcard']">Adicione uma carta</button>
     </div>
 </body>
 </html>
