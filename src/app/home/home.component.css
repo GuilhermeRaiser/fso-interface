@@ -1,4 +1,3 @@
-/* Reset some default styles */
 body, h1, ul, li, button {
     margin: 0;
     padding: 0;
@@ -7,7 +6,7 @@ body, h1, ul, li, button {
   
   body {
     font-family: Arial, sans-serif;
-    background-color: rgba(104, 37, 53, 1); /* Cor de fundo azul */
+    background-color: rgba(104, 37, 53, 1); 
     color: white;
     display: flex;
     flex-direction: column;
@@ -19,13 +18,13 @@ body, h1, ul, li, button {
   h1 {
     
         font-family: 'Monoton', cursive;
-        font-size: 6rem; /* Tamanho da fonte ajustado */
+        font-size: 6rem; 
         margin-bottom: 1rem;
       }
  
   
   .container {
-    background-color: rgba(104, 37, 53, 1); /* Fundo branco para o container */
+    background-color: rgba(104, 37, 53, 1);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

@@ -1,4 +1,4 @@
-/* Variáveis CSS para facilitar a manutenção e consistência do design */
+
 :root {
     
     --input-background-color: #f8f9fa;
@@ -76,7 +76,7 @@
     margin-bottom: 1rem;
     border-radius: 0.5cap;
     width: 40%;
-    margin-left: 25%;
+    margin-left: 30%;
     
   }
   

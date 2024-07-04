@@ -1,15 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CardService } from '../service/card.service';
 import { Card } from '../model/card';
 
 @Component({
   selector: 'app-deck',
   templateUrl: './deck.component.html',
-  styleUrl: './deck.component.css'
+  styleUrls: ['./deck.component.css']
 })
-export class DeckComponent {
+export class DeckComponent implements OnInit {
   cards: Card[] = [];
-  router: any;
+  editingCard: Card | null = null;
 
   constructor(private cardService: CardService) { }
 
@@ -19,10 +19,14 @@ export class DeckComponent {
     });
   }
 
-  deleteCard(cardId: number | undefined = 0): void {
+  deleteCard(cardId: number | undefined): void {
+    if (cardId === undefined) {
+      console.error('cardId está undefined!');
+      return;
+    }
     this.cardService.deleteCard(cardId).subscribe(() => {
-      this.router.navigate(['/deck']);
+      this.cards = this.cards.filter(card => card.id !== cardId);
     });
   }
-}
 
+}
