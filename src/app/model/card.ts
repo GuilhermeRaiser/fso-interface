@@ -1,5 +1,5 @@
 export class Card {
-    id: number = 0;
+    id?: number;
     titulo: string = "";
     textoFrente: string = "";
     addnomeDeck: string ="";

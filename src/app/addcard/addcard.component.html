@@ -10,21 +10,24 @@
 <body>
   <h1>MemCard</h1>
   <main class="container">
-    <div class="addcard" style="width: 18rem;" >
-        <div class="card-body">
-          <h5 class="card-title">Deck</h5>
-          <br>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Qual deck gostaria de adicionar?">
-          <br>
-          <h5 class="card-title">Titulo</h5>
-          <br>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Qual titulo gostaria de adicionar?">
-          <br>
-          <h5 class="card-title">Texto</h5>
-          <br>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Qual o texto?">
-        </div>
-    </div>
+    <form (ngSubmit)="onSubmit()">
+      <div class="addcard" style="width: 18rem;" >
+          <div class="card-body">
+            <h5 class="card-title">Deck</h5>
+            <br>
+            <input type="text" class="form-control" [(ngModel)]="card.addnomeDeck" name="addnomeDeck" required  id="exampleFormControlInput1" placeholder="Qual deck gostaria de adicionar?">
+            <br>
+            <h5 class="card-title">Titulo</h5>
+            <br>
+            <input type="text" class="form-control" [(ngModel)]="card.titulo" name="titulo" required id="exampleFormControlInput1" placeholder="Qual titulo gostaria de adicionar?">
+            <br>
+            <h5 class="card-title">Texto</h5>
+            <br>
+            <input type="text" class="form-control" [(ngModel)]="card.textoFrente" name="textoFrente" required  id="exampleFormControlInput1" placeholder="Qual o texto?">
+          </div>
+          <button type="submit">Create</button>
+      </div>
+    </form>
   </main>
 </body>
 </html>

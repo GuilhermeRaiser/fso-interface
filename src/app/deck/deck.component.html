@@ -9,35 +9,17 @@
     <div class="container">
         <h1>Deck de Cartas</h1>
         
-        <div class="card-container">
+        <div class="card-container" *ngFor="let card of cards">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Carta 1</h5>
-                    <p class="card-text">Conteúdo da Carta 1</p>
+                    <h5 class="card-title">{{card.addnomeDeck}}</h5>
+                    <h5 class="card-title">{{card.titulo}}</h5>
+                    <p class="card-text">{{card.textoFrente}}</p>
                     <button class="btn-edit">Editar</button>
                     <button class="btn-delete">Excluir</button>
                 </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Carta 2</h5>
-                    <p class="card-text">Conteúdo da Carta 2</p>
-                    <button class="btn-edit">Editar</button>
-                    <button class="btn-delete">Excluir</button>
-                </div>
-            </div>
-            
-            <!-- Adicione mais cartas aqui -->
-            
-        </div>
-        
-        <div class="controls">
-            <button id="btn-prev">Anterior</button>
-            <button id="btn-next">Próxima</button>
+            </div>       
         </div>
     </div>
-    
-    <script src="script.js"></script>
 </body>
 </html>
